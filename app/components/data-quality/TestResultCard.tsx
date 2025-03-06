@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 export type TestStatus = 'passed' | 'failed' | 'warning' | 'running';

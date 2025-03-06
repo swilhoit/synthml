@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import DataQualitySummary from '@/app/components/data-quality/DataQualitySummary';
 import TestResultCard from '@/app/components/data-quality/TestResultCard';
@@ -155,6 +157,12 @@ const mockQualityTimelineData = [
 ];
 
 export default function DataQualityDashboard() {
+  const handleTestCardClick = (testId: number) => {
+    // This function will be implemented to handle test card clicks
+    console.log(`Test card clicked: ${testId}`);
+    // In a real application, this could open a modal with test details
+  };
+
   return (
     <div className="py-6 px-6">
       <div className="mb-6">
@@ -228,7 +236,7 @@ export default function DataQualityDashboard() {
               affectedColumns={test.affectedColumns}
               score={test.score}
               runtime={test.runtime}
-              onClick={() => {}}
+              onClick={() => handleTestCardClick(test.id)}
             />
           ))}
         </div>
