@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'standalone',
+  reactStrictMode: true,
+  poweredByHeader: false,
+  swcMinify: true,
+  // Add an empty basePath to ensure proper path handling in production
+  basePath: '',
 };
 
 export default nextConfig;
